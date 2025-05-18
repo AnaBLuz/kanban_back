@@ -34,7 +34,7 @@ export class TasksService {
   findByStatus(status: string) {
     return this.prisma.task.findMany({
       where: {
-        status: status.toUpperCase() as Status, 
+        status: status.toUpperCase() as any, 
          },
     });
   }
